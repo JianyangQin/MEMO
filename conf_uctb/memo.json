@@ -1,0 +1,77 @@
+{
+    "begin_year": 2020,
+    "end_year": 2024,
+    "dropout": 0.0,
+    "lr": 0.01,
+    "batch_size": 32,
+    "epoch": 200,
+    "gpuid": 1,
+    "loss": "mse",
+    "activation": "gelu",
+    "scheduler": "epo",
+    "train": 1,
+    "y_len": 1,
+    "x_len": 12,
+    "data_process": 0,
+    "auto_test": 1,
+    "raw_data_path": "data/UCTB/finaldata/",
+    "save_data_path": "data/UCTB/FastData/",
+    "graph_path": "data/UCTB/graph/",
+    "model_path": "res_uctb/",
+    "gcn":{
+        "in_channel": 12,
+        "out_channel": 12,
+        "hidden_channel": 64,
+        "activation": true,
+        "fc": false
+    },
+
+    "tcn":{
+        "in_channel": 1,
+        "out_channel": 1,
+        "kernel_size": 3,
+        "dilation": 1
+    },
+
+
+    "logname": "MEMO",
+
+    "strategy": "incremental",
+    "init": true,
+    "increase": true,
+    "num_hops": 2,
+    "graph_normal": true,
+    "n_work": 0,
+    "time_per_day": 24,
+
+    "pre_scalar": false,
+    "patience": 5,
+    "pred_time": [1],
+
+    "pattern": true,
+    "n_clusters": 50,
+    "kc": 5,
+    "keep_centroid": false,
+
+    "ntk": true,
+    "full_ntk": true,
+
+    "forget_weights": [0.0, 0.7, 0.7, 0.7, 0.7],
+
+    "spatial_replay_rate": 0.2,
+    "objective_samples": 8,
+    "min_spatial_replay_nodes": 3,
+
+    "replay": false,
+    "replay_strategy": "random",
+    "replay_rate": 0.05,
+
+    "increase_rate": 0.2,
+
+    "temporal_replay_rate": 0.2,
+    "shuffle": false,
+
+
+    "spatial_replay_load_path": false,
+    "temporal_replay_load_path": false
+}
